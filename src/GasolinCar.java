@@ -1,6 +1,4 @@
 public class GasolinCar extends AFuelCar {
-
-
     public GasolinCar(String make, String model, int numberOfDoors, String registrationNumber, int kmPrLitre) {
         super(make, model, numberOfDoors, registrationNumber, kmPrLitre);
     }
@@ -24,12 +22,8 @@ public class GasolinCar extends AFuelCar {
         }
     }
 
-
-
-
     @Override
     public String toString(){
-
-        return "Make: " +getMake() +"\n" + "Model: " + getModel() +"\n" +"Regestration number: " + getRegistrationNumber() + "\n" + "Number of doors: " + getNumberOfDoors() + "\n" + "Km/L: " + getKmPrLitre() + "\n" + "Registration fee: " + getRegistrationFee() + "\n";
+        return super.toString();
     }
 }
