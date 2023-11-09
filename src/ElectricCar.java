@@ -1,7 +1,7 @@
 public class ElectricCar extends ACar {
 
-    private int batteryCapacity;
-    private int maxRange;
+    private final int batteryCapacity;
+    private final int maxRange;
 
 
     public ElectricCar(String make, String model, int numberOfDoors, String registrationNumber,int batteryCapacity, int maxRange) {
@@ -9,26 +9,21 @@ public class ElectricCar extends ACar {
         this.batteryCapacity = batteryCapacity;
         this.maxRange = maxRange;
     }
-
+//region getters
     public int getBatteryCapacityKWh(){
         return batteryCapacity;
-
     }
 
     public int getMaxRangeKm(){
-
         return maxRange;
     }
 
     public int getWhPrKm(){
-
         return (batteryCapacity*1000)/maxRange;
     }
 
-
     public int getRegistrationFee() {
         double kmPrLitre = 100 / (getWhPrKm() / 91.25);
-
 
         if (kmPrLitre <= 50 && kmPrLitre >= 20) {
             return 330;
@@ -42,14 +37,12 @@ public class ElectricCar extends ACar {
             return 10470;
         }
     }
-
-
-
-
+//endregion
     @Override
-    public String toString(){
-
-        return  "Make: " +getMake() +"\n" + "Model: " + getModel() +"\n" +"Regestration number: " + getRegistrationNumber() + "\n" + "Number of doors: " + getNumberOfDoors() + "\n" + "Battery capcacity: " +getBatteryCapacityKWh() + "\n" + "Max range: " + getMaxRangeKm() + "\n" + "WprKm: " + getWhPrKm() + "\n"+ "Registration fee: " + getRegistrationFee() + "\n";
+    public String toString() {
+        return String.format("%sBattery Capacity: %d\nMax range: %d\n",
+                super.toString(),
+                batteryCapacity,
+                maxRange);
     }
-
 }
