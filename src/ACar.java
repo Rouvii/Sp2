@@ -12,6 +12,8 @@ private String registrationNumber;
         this.registrationNumber = registrationNumber;
 
     }
+    //ACar is the superclass that has all the main/basic functions which gets implemented in the subclasses/entity classes.
+    //region getters
     public String getRegistrationNumber(){
         return registrationNumber;
     }
@@ -23,13 +25,12 @@ private String registrationNumber;
 
         return model;
     }
-
     public int getNumberOfDoors() {
 
         return numberOfDoors;
     }
-
-
+    //endregion
+//ToString method returns null since it gets overwritten in all the other classes
     @Override
    public String toString(){
         return null;

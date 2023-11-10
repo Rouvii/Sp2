@@ -12,7 +12,7 @@ public class FleetOfCars {
     fleet.add(car);
 
     }
-
+//Made a for loop to combine all the regestration fees for all of the cars
     public int getTotalRegistrationFeeForFleet(){
         int totalRegFee = 0;
         for (Car car:fleet) {
@@ -20,7 +20,7 @@ public class FleetOfCars {
         }
         return totalRegFee;
     }
-
+//toString method to print out the cars from the array
     @Override
     public String toString(){
         String wholeFleet = "";

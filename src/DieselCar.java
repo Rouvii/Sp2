@@ -18,7 +18,11 @@ public class DieselCar extends AFuelCar {
         return particleFilter;
         }
 
-
+//A getter which calculates the registration fee for a diesel type car. I expect that not many cars drive above 50KmPrLitre
+    // therefor everything that doesn't drive within the specified numbers in the if-statements will return 10470 + the 15269 ekstra fee for a diesel car.
+    //can be fixed with simply everyting that drives above 50 KmPrLitre will return 330+the ekstra fee for a diesel car
+    //Made a variable of type int particleFee, which is set to 1000. Which is the fee for having no particle filter
+    //included an if-statement if(hasParticleFilter() will set the particleFee to 0 using our has method.
     public int getRegistrationFee(){
             int particleFee = 1000;
             if(hasParticleFilter()){

@@ -8,7 +8,7 @@ public abstract class AFuelCar extends ACar  {
         super(make, model, numberOfDoors, registrationNumber);
         this.kmPrLitre = kmPrLitre;
     }
-
+//region getters
     public String getFuelType(){
 
         return null;
@@ -18,7 +18,7 @@ public abstract class AFuelCar extends ACar  {
 
         return kmPrLitre;
     }
-
+//endregion
     @Override
     public String toString(){
 

@@ -9,7 +9,7 @@ public class ElectricCar extends ACar {
         this.batteryCapacity = batteryCapacity;
         this.maxRange = maxRange;
     }
-
+//region getters
     public int getBatteryCapacityKWh(){
         return batteryCapacity;
 
@@ -19,13 +19,13 @@ public class ElectricCar extends ACar {
 
         return maxRange;
     }
-
+//Calculating the watt pr Km
     public int getWhPrKm(){
 
         return (batteryCapacity*1000)/maxRange;
     }
 
-
+//calculating the regestration fee for an electric car using the given formula, to convert WhPrKm to KmPrLitre
     public int getRegistrationFee() {
         double kmPrLitre = 100 / (getWhPrKm() / 91.25);
 
@@ -42,7 +42,7 @@ public class ElectricCar extends ACar {
             return 10470;
         }
     }
-
+//endregion
 
 
 

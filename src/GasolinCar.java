@@ -9,6 +9,9 @@ public class GasolinCar extends AFuelCar {
     public String getFuelType() {
         return "Gasolin";
     }
+//A getter which calculates the registration fee for a gasolin type car. I expect that not many cars drive above 50KmPrLitre
+// therefor everything that doesn't drive within the specified numbers in the if-statements will return 1047
+    //can be fixed with simply everyting that drives above 50 KmPrLitre will return 330
 
     public int getRegistrationFee() {
         if (getKmPrLitre() <= 50 && getKmPrLitre() >= 20) {
